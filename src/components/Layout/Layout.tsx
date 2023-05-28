@@ -35,14 +35,16 @@ export default function Layout({ children }: Props) {
             headerStuck ? "px-4 py-3 md:px-8 md:py-6" : "p-4 md:p-8"
           )}
         >
-          <Image
-            src="/elisa-logotype.svg"
-            alt="Elisa Logo"
-            className="dark:brightness-0 dark:invert"
-            width={headerStuck ? 60 : 100}
-            height={headerStuck ? 24 : 40}
-            priority
-          />
+          <Link href="/">
+            <Image
+              src="/elisa-logotype.svg"
+              alt="Elisa Logo"
+              className="dark:brightness-0 dark:invert"
+              width={headerStuck ? 60 : 100}
+              height={headerStuck ? 24 : 40}
+              priority
+            />
+          </Link>
           <nav className="hidden md:block">
             <Link
               href="/news"
