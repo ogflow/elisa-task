@@ -1,0 +1,9 @@
+.tag {
+  background: rgb(var(--light-blue-rgb));
+}
+
+@media (prefers-color-scheme: dark) {
+  .tag {
+    background: rgb(var(--middle-blue-rgb));
+  }
+}

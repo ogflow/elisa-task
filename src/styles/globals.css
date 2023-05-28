@@ -12,7 +12,7 @@
   }
   a {
     @apply underline;
-    color: var(--brand-color);
+    color: rgb(var(--middle-blue-rgb));
   }
   p {
     @apply mb-4;
@@ -23,15 +23,20 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 65, 65, 65;
-  --background-rgb: 255, 255, 255;
-  --brand-color: #006dfc;
+  --foreground-rgb: 65, 65, 65; /* #414141 */
+  --background-rgb: 255, 255, 255; /* #ffffff */
+
+  --brand-blue-rgb: 0, 35, 157; /* #00239D */
+  --dark-blue-rgb: 23, 28, 67; /* #171C43 */
+  --middle-blue-rgb: 0, 106, 237; /* #006AED*/
+  --pale-blue-rgb: 150, 197, 255; /* #96C5FF */
+  --light-blue-rgb: 222, 237, 255; /* #DEEDFF */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-rgb: 15, 23, 42;
+    --foreground-rgb: 255, 255, 255; /* #ffffff */
+    --background-rgb: 16, 18, 33; /* #101221 */
   }
 }
 

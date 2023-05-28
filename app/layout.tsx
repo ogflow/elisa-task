@@ -1,3 +1,4 @@
+import Layout from "@/src/components/Layout/Layout";
 import "@styles/globals.css";
 import { Open_Sans } from "next/font/google";
 
@@ -15,7 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Layout>{children}</Layout>
+      </body>
     </html>
   );
 }

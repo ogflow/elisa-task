@@ -1,0 +1,5 @@
+.header-wrapper {
+  background: rgb(var(--background-rgb));
+  padding-top: 1px;
+  top: -1px;
+}
