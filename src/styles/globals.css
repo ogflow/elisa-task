@@ -11,7 +11,8 @@
     @apply text-lg;
   }
   a {
-    @apply text-blue-600 underline;
+    @apply underline;
+    color: var(--brand-color);
   }
   p {
     @apply mb-4;
@@ -24,12 +25,13 @@
 :root {
   --foreground-rgb: 65, 65, 65;
   --background-rgb: 255, 255, 255;
+  --brand-color: #006dfc;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-rgb: 64, 64, 65;
+    --background-rgb: 15, 23, 42;
   }
 }
 
