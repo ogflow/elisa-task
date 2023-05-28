@@ -12,7 +12,7 @@
   }
   a {
     @apply underline;
-    color: #006dfc;
+    color: var(--blue-color);
   }
   p {
     @apply mb-4;
@@ -23,19 +23,20 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 65, 65, 65;
-  --background-rgb: 255, 255, 255;
-  --brand-color: #0019af;
+  --foreground-hex: #414141;
+  --background-hex: #ffffff;
+  --brand-color-hex: #0019af;
+  --blue-color-hex: #006dfc;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-rgb: 15, 23, 42;
+    --foreground-hex: #ffffff;
+    --background-hex: #0f172a;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+  color: var(--foreground-hex);
+  background: var(--background-hex);
 }
