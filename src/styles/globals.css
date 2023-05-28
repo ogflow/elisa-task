@@ -12,7 +12,7 @@
   }
   a {
     @apply underline;
-    color: var(--blue-color);
+    color: var(--blue-color-hex);
   }
   p {
     @apply mb-4;
