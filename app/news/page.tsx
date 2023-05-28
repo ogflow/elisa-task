@@ -1,16 +1,19 @@
 import getAllNews from "@/src/api/news/getAllNews";
+import NewsCard from "@/src/components/NewsCard/NewsCard";
 
 export default async function NewsPage() {
   const news = await getAllNews();
 
   return (
-    <ul>
-      {news.map((item) => (
-        <li key={item.id}>
-          <span>{item.publishDate}</span>
-          <a href={`/news/${item.id}`}>{item.title}</a>
-        </li>
-      ))}
-    </ul>
-  )
+    <main className="container max-w-4xl mx-auto px-4 md:px-8 py-8 md:py-16">
+      <h1 className="my-5 font-bold">Recent news</h1>
+      <ul className="flex flex-col gap-2">
+        {news.map((item) => (
+          <li key={item.id}>
+            <NewsCard item={item} />
+          </li>
+        ))}
+      </ul>
+    </main>
+  );
 }
