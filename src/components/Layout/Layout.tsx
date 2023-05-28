@@ -29,7 +29,6 @@ export default function Layout({ children }: Props) {
       >
         <div
           className={classNames(
-            "bg-white dark:bg-slate-900",
             "border-b border-b-slate-200 dark:border-b-slate-800",
             "flex gap-8 items-center",
             headerStuck ? "px-4 py-3 md:px-8 md:py-6" : "p-4 md:p-8"
