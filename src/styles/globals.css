@@ -12,7 +12,7 @@
   }
   a {
     @apply underline;
-    color: var(--blue-color-hex);
+    color: rgb(var(--middle-blue-rgb));
   }
   p {
     @apply mb-4;
@@ -23,20 +23,24 @@
 @tailwind utilities;
 
 :root {
-  --foreground-hex: #414141;
-  --background-hex: #ffffff;
-  --brand-color-hex: #0019af;
-  --blue-color-hex: #006dfc;
+  --foreground-rgb: 65, 65, 65; /* #414141 */
+  --background-rgb: 255, 255, 255; /* #ffffff */
+
+  --brand-blue-rgb: 0, 35, 157; /* #00239D */
+  --dark-blue-rgb: 23, 28, 67; /* #171C43 */
+  --middle-blue-rgb: 0, 106, 237; /* #006AED*/
+  --pale-blue-rgb: 150, 197, 255; /* #96C5FF */
+  --light-blue-rgb: 222, 237, 255; /* #DEEDFF */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-hex: #ffffff;
-    --background-hex: #0f172a;
+    --foreground-rgb: 255, 255, 255; /* #ffffff */
+    --background-rgb: 15, 23, 42; /* #0f172a */
   }
 }
 
 body {
-  color: var(--foreground-hex);
-  background: var(--background-hex);
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
 }

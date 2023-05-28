@@ -18,8 +18,8 @@
 
 .button--primary {
   color: #fff;
-  background-color: #00239d;
-  border-color: #00239d;
+  background-color: rgb(var(--brand-blue-rgb));
+  border-color: rgb(var(--brand-blue-rgb));
 }
 .button--primary:hover {
   background-color: #001d84;
@@ -27,22 +27,12 @@
 }
 
 .button--light {
-  color: #40404a;
+  color: rgb(var(--foreground-rgb));
   background-color: transparent;
-  border-color: #40404a;
+  border-color: rgb(var(--foreground-rgb));
 }
 .button--light:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.button--link {
-  color: #00239d;
-  background-color: transparent;
-  border-color: transparent;
-}
-.button--link:hover {
-  background-color: #f2f2f2;
-  border-color: #f2f2f2;
+  background-color: rgba(var(--foreground-rgb), 0.05);
 }
 
 .button--medium {
