@@ -10,7 +10,7 @@ export default function NewsCard({ item }: Props) {
   const { id, publishDate, title, siteSpecificTags } = item;
 
   return (
-    <article className="border px-6 py-8 flex flex-col gap-4">
+    <article className="border dark:border-transparent dark:bg-slate-800 px-6 py-8 flex flex-col gap-4">
       <span>{new Date(publishDate)?.toLocaleString()}</span>
       <Link href={`/news/${id}`} className="no-underline hover:underline">
         {title}
