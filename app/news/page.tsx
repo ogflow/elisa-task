@@ -1,6 +1,10 @@
 import getAllNews from "@/src/api/news/getAllNews";
 import NewsCard from "@/src/components/NewsCard/NewsCard";
 
+export const metadata = {
+  title: "Recent news — Elisa",
+};
+
 export default async function NewsPage() {
   const news = await getAllNews();
 

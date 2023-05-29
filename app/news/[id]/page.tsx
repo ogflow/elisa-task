@@ -1,5 +1,6 @@
 import getItem from "@/src/api/news/getItem";
 import Button from "@/src/components/Button/Button";
+import { Metadata } from "next";
 import Link from "next/link";
 import sanitize from "sanitize-html";
 
@@ -9,6 +10,14 @@ type Params = {
 type Props = {
   params: Params;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const item = await getItem(params.id);
+
+  return {
+    title: item.title + " — Elisa",
+  };
+}
 
 export default async function NewsItemPage({ params: { id } }: Props) {
   const item = await getItem(id);
