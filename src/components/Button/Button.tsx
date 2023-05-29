@@ -1,6 +1,7 @@
 "use client";
 import { useButton } from "@react-aria/button";
 import classNames from "classnames";
+import Link from "next/link";
 import { useRef } from "react";
 import { AriaButtonProps } from "react-aria";
 import styles from "./Button.module.css";
@@ -15,10 +16,12 @@ export default function Button(props: Props) {
   let ref = useRef(null);
   let { buttonProps } = useButton(props, ref);
 
-  const { color = "primary", size = "medium" } = props;
+  const { color = "primary", size = "medium", elementType = "button" } = props;
+
+  const Element = props.href ? Link : elementType;
 
   return (
-    <button
+    <Element
       {...buttonProps}
       ref={ref}
       className={classNames(
@@ -27,8 +30,9 @@ export default function Button(props: Props) {
         styles[`button--${size}`],
         props.className
       )}
+      href={props.href}
     >
       {props.children}
-    </button>
+    </Element>
   );
 }
