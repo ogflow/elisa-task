@@ -19,6 +19,8 @@ export default function Layout({ children }: Props) {
     );
 
     observer.observe(headerRef.current as Element);
+
+    return () => observer.disconnect();
   }, [headerRef, setHeaderStuck]);
 
   return (
