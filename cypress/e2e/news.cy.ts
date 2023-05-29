@@ -1,15 +1,15 @@
 describe("News page", () => {
-  it("loads", () => {
+  it("page is loading", () => {
     cy.visit("/news");
   });
 
-  it("displays news items", () => {
+  it("displays some news items", () => {
     cy.visit("/news");
 
     cy.get("ul#news-list").children().should("have.length.greaterThan", 0);
   });
 
-  it("opens news item when clicking on it", () => {
+  it("opens news details page when clicking on news heading", () => {
     cy.visit("/news");
 
     cy.get("ul#news-list").children().first().click();
